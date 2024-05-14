@@ -1,5 +1,6 @@
 ___
 # Denture Design Studio
+Denture Design studio is a graphical platform that provides an opportunity for real-time denture designing with features for self evaluation for dental students with guidance from assesors
 ___
 
 
