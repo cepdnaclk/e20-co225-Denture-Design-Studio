@@ -2,6 +2,7 @@ import "./ModelAnswer.css";
 import { useNavigate } from "react-router-dom";
 import Home from "E:/e20-co225-Denture-Design-Studio/FrontEnd-DenturedesignStudio/src/homebutton/home.jsx";
 import BackButton2 from "E:/e20-co225-Denture-Design-Studio/FrontEnd-DenturedesignStudio/src/BackButton2/BackButton2.jsx";
+import Popup from "reactjs-popup";
 
 function ModelAnswer() {
   let navigate = useNavigate();
@@ -12,7 +13,7 @@ function ModelAnswer() {
   return (
     <div className="ModelAnswePage">
       <Home onClick={() => handleClick("/studenthome")}></Home>
-      <BackButton2 onClick={() => handleClick("/back")}></BackButton2>
+      <BackButton2 onclick={() => handleClick("/back")}></BackButton2>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
@@ -24,9 +25,25 @@ function ModelAnswer() {
       <h4 className="YourAnswer">Your Answer:</h4>
       <div className="TeethBackground"></div>
       <div className="ModelAnswerbuttons">
-        <button className="ModelAnswerButton" id="ViewAnswer">
-          View Answer
-        </button>
+        <Popup
+          trigger={
+            <button className="ModelAnswerButton" id="ViewAnswer">
+              View Model Answer
+            </button>
+          }
+          modal
+          nested
+        >
+          {(close) => (
+            <div className="ModelAnswer">
+              <div className="HeaderMA">Model Answer</div>
+              <div className="TeethMA"></div>
+              <button className="downloadAnswerMA">
+                Download Model Answer
+              </button>
+            </div>
+          )}
+        </Popup>
         <button className="ModelAnswerButton" id="DownloadAnswer">
           Download Your Answer
         </button>
