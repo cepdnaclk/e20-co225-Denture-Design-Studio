@@ -408,47 +408,6 @@ const RetentionUpImages = [
     t20_out
       ]
     
-    
-    const RetentionDownImages = [
-    
-    t2_down_in, 
-    t2_down_out,
-    t3_down_in, 
-    t3_down_out,
-    t4_down_in, 
-    t4_down_out,
-    t5_down_in, 
-    t5_down_out,
-    t6_down_in, 
-    t6_down_out,
-    t7_down_in, 
-    t7_down_out,
-    t8_down_in, 
-    t8_down_out,
-    t9_down_in, 
-    t9_down_out,
-    t11_down_in, 
-    t11_down_out,
-    t12_down_in, 
-    t12_down_out,
-    t13_down_in, 
-    t13_down_out,
-    t14_down_in, 
-    t14_down_out,
-    t15_down_in, 
-    t15_down_out,
-    t16_down_in, 
-    t16_down_out,
-    t17_down_in, 
-    t17_down_out,
-    t18_down_in, 
-    t18_down_out,
-    t19_down_in, 
-    t19_down_out,
-    t20_down_in, 
-    t20_down_out,
-  ],
-};
 
 const Gingivally = {
   type: "Gingivally",
