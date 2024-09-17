@@ -155,7 +155,7 @@ const Teeth = ({
   };
 
   /**
- * @subsection Handles clicking on a tooth to toggle its selection as missing.
+ * @description Handles clicking on a tooth to toggle its selection as missing.
  * Updates the state to reflect which teeth are selected as missing.
  * 
  * @param {number} index - The index of the tooth being clicked.
@@ -186,9 +186,7 @@ const Teeth = ({
 
   
   /**
-  * @subsection 
-  * 
-  * Handles clicking on a rest to toggle its selection.
+  * @description Handles clicking on a rest to toggle its selection.
   * Ensures that the rest matches the selected rest type (occlusal, incisal, or cingulam) and
   * prevents adding rests to missing teeth.
   * 
@@ -286,24 +284,24 @@ const Teeth = ({
 
 
   /**
-  * Handles the click event for selecting or deselecting an undercut for a given tooth.
-  * 
-  * @param {number} index - The index of the undercut being clicked.
-  * 
-  * The function toggles the selected state of the undercut at the given index.
-  * If `disableSelection` is false, it updates the state to either select or deselect
-  * the undercut for the specified tooth.
-  */
+    * Handles the click event for selecting or deselecting an undercut for a given tooth.
+    * 
+    * @param {number} index - The index of the undercut being clicked.
+    * 
+    * The function toggles the selected state of the undercut at the given index.
+    * If `disableSelection` is false, it updates the state to either select or deselect
+    * the undercut for the specified tooth.
+    */
 
-  const handleUndercutClick = (index) => {
-    if (!disableSelection) {
-      setSelectedUndercut((prevState) => {
-        const newState = [...prevState];
-        newState[index] = !newState[index];
-        return newState;
-      });
-    }
-  };
+    const handleUndercutClick = (index) => {
+      if (!disableSelection) {
+        setSelectedUndercut((prevState) => {
+          const newState = [...prevState];
+          newState[index] = !newState[index];
+          return newState;
+        });
+      }
+    };
 
 
 
@@ -841,7 +839,7 @@ const handleClaspClick = (index, UporDown) => {
   * 
   * The visibility, opacity, and zIndex of each button are controlled based on the current state and the type of retention or selection.
   * 
-  * The component also includes `useEffect` hooks to manage side effects related to state changes, such as resetting selections or adjusting zIndex.
+  * `useEffect` hooks - to manage side effects related to state changes, such as resetting selections or adjusting zIndex.
   * 
   * @returns {JSX.Element} The rendered `Teeth` component.
   */
