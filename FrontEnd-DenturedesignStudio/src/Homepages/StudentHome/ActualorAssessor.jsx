@@ -25,16 +25,15 @@ function ActualorAssessor({ cancel, solve, userdata }) {
 
   const handleAutocase = () => {
     setgenarated(true);
-    const numberofteeth = Math.floor(Math.random() * 5 + 2);
+    const numberofteeth = Math.floor(Math.random() * 11 + 3);
     const missingteeths = new Set();
     for (let index = 0; index < numberofteeth; index++) {
-      missingteeths.add(Math.floor(Math.random() * 32) + 1);
+      missingteeths.add(Math.floor(Math.random() * 16) + 1);
+      missingteeths.add(Math.floor(Math.random() * 16) + 17);
     }
     const missingteetharray = Array.from(missingteeths);
     missingteetharray.forEach((element) => {
-      console.log(missingteeth[element - 1]);
       missingteeth[element - 1] = true;
-      console.log(missingteeth[element - 1]);
     });
     setSelectedData({
       restdata: null,
@@ -49,12 +48,14 @@ function ActualorAssessor({ cancel, solve, userdata }) {
     setTimeout(() => {
       html2canvas(autoRef.current).then((canvas) => {
         const imgData = canvas.toDataURL("image/png");
-        navigate("/addSaddles", { state: { userdata, imgData } });
+        navigate("/addSaddles", {
+          state: { userdata, imgData, isAutoCase: true },
+        });
         solve();
       });
     }, 5);
   };
-  console.log(selectedData);
+
   return (
     <div>
       <div className="ActualorAssessor-overlay"></div>
